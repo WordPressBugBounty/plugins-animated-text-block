@@ -130,28 +130,3 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 = 1.0.0 =
 * Initial Release
-
-
-== Upgrade Notice ==
-
-= 1.0.6 =
-* Animation starts when visible
-
-= 1.0.5 =
-* Performance Improvements
-
-= 1.0.4 =
-* Add translate feature
-
-= 1.0.3 =
-* Reduce PHP Code
-* Performance Improvement
-
-= 1.0.2 =
-* Reduce PHP Code
-
-= 1.0.1 =
-* performance improvement
-
-= 1.0.0 =
-* Initial Release
