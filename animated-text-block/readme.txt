@@ -2,9 +2,9 @@
 Contributors: bplugins, abuhayat, charlescormier
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, animated text, text animation, text animated, Gutenberg block
-Requires at least: 6.2+
-Tested up to: 6.6.2
-Stable tag: 1.0.6
+Requires at least: 6.5+
+Tested up to: 6.7.1
+Stable tag: 1.0.7
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -108,6 +108,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 1.0.7 - 12 Dec 24 =
+* Fix Color CSS issue.
 
 = 1.0.6 =
 * Animation starts when visible
