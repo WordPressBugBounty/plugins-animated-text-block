@@ -15,6 +15,12 @@
       "type": "string",
       "default": ""
     },
+    "options": {
+      "type": "object",
+      "default": {
+        "theme": "default"
+      }
+    },
     "loop": {
       "type": "boolean",
       "default": true
@@ -38,6 +44,10 @@
     "outSequence": {
       "type": "string",
       "default": "shuffle"
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
     },
     "textAlign": {
       "type": "string",
@@ -64,6 +74,10 @@
         }
       }
     },
+    "textAlignment": {
+      "type": "string",
+      "default": "center"
+    },
     "color": {
       "type": "string",
       "default": "#333"
@@ -79,6 +93,59 @@
       "type": "object",
       "default": {
         "radius": "5px"
+      }
+    },
+    "animatedSize": {
+      "type": "object",
+      "default": {
+        "width": {
+          "desktop": "100%",
+          "tablet": "",
+          "mobile": ""
+        },
+        "height": {
+          "desktop": "500px",
+          "tablet": "",
+          "mobile": ""
+        }
+      }
+    },
+    "repeat": {
+      "type": "boolean",
+      "default": true
+    },
+    "gsapAnimation": {
+      "type": "object",
+      "default": {
+        "animationSpeed": 30,
+        "perspectiveDepth": 500,
+        "enableOscillation": true,
+        "repeatBehavior": -1,
+        "repeatDelay": 2,
+        "animationEffect": "default",
+        "autoRepeat": true,
+        "transformOrigin": 400,
+        "randomColor": false,
+        "isTextShadow": false,
+        "textShadow": [
+          {
+            "blur": "19px",
+            "color": "rgba(39, 195, 130, 1)",
+            "hOffset": "4px",
+            "isInset": false,
+            "spreed": "0px",
+            "vOffset": "1px"
+          }
+        ],
+        "fontStretch": "200%",
+        "animationDuration": 1,
+        "waveEffect": 25,
+        "easeType": "elastic(0.3, 0.2)",
+        "scaleX": 1.5,
+        "scaleY": 0.2,
+        "typingSpeed": 100,
+        "reStartTime": 1000,
+        "animateType": "glitch"
       }
     }
   },
@@ -96,7 +163,9 @@
   },
   "editorScript": [
     "file:./index.js",
-    "textillate"
+    "textillate",
+    "wp-api",
+    "wp-api-request"
   ],
   "editorStyle": "file:./index.css",
   "style": [
