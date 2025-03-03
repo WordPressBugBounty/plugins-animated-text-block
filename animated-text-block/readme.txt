@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, animated text, text animation, text animated, Gutenberg block
 Requires at least: 6.5+
 Tested up to: 6.7.2
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -139,6 +139,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 1.1.1 - 3 March 25 =
+* Updated freemius sdk
 
 = 1.1.0 - 1 March 25 =
 * Upgrade to pro version
