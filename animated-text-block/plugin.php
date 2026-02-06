@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Animated Text Block
  * Description: Apply animation on any text.
- * Version: 1.1.3
+ * Version: 1.2.0
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -18,7 +18,7 @@ if ( !defined( 'ABSPATH' ) ) {
 if ( function_exists( 'atb_fs' ) ) {
     atb_fs()->set_basename( false, __FILE__ );
 } else {
-    define( 'ATB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.1.3' ) );
+    define( 'ATB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.2.0' ) );
     define( 'ATB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'ATB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'ATB_HAS_FREE', 'animated-text-block/plugin.php' === plugin_basename( __FILE__ ) );
@@ -29,7 +29,7 @@ if ( function_exists( 'atb_fs' ) ) {
             global $atb_fs;
             if ( !isset( $atb_fs ) ) {
                 $fsStartPath = dirname( __FILE__ ) . '/freemius/start.php';
-                $bSDKInitPath = dirname( __FILE__ ) . '/bplugins_sdk/init.php';
+                $bSDKInitPath = dirname( __FILE__ ) . '/freemius-lite/start.php';
                 if ( ATB_HAS_PRO && file_exists( $fsStartPath ) ) {
                     require_once $fsStartPath;
                 } else {
@@ -221,68 +221,16 @@ if ( function_exists( 'atb_fs' ) ) {
 
             function atb_render_demo_page() {
                 ?>
-				<div id="bplAdminHelpPage" data-version='<?php 
-                echo esc_attr( ATB_VERSION );
-                ?>' data-is-premium='<?php 
-                echo esc_attr( atbIsPremium() );
-                ?>'>
-					<div class='renderHere'>
-
-					</div>
-					<div class="templates" style="display: none;">
-						<div class="theme1" style="width:600px" margin="0 auto">
-							<?php 
-                echo wp_kses_post( $this->renderTemplate( '<!-- wp:atb/animated-text {"options":{"theme":"type1"},"background":{"color":"#000"},"typography":{"fontSize":{"desktop":120,"tablet":100,"mobile":80},"textTransform":"uppercase","fontWeight":500,"lineHeight":"135%"},"color":"#fff","gsapAnimation":{"animationSpeed":30,"perspectiveDepth":500,"enableOscillation":true,"repeatBehavior":-1,"repeatDelay":0,"animationEffect":"default","autoRepeat":true,"transformOrigin":400,"randomColor":false,"isTextShadow":false,"textShadow":[{"blur":"19px","color":"rgba(39, 195, 130, 1)","hOffset":"4px","isInset":false,"spreed":"0px","vOffset":"1px"}],"fontStretch":"200%","animationDuration":2,"waveEffect":25,"easeType":"elastic(0.3, 0.2)","scaleX":1.5,"scaleY":0.2,"typingSpeed":100,"reStartTime":1000,"animateType":"glitch","customColor":false}} /-->' ) );
-                ?>
-						</div>
-						<div class="theme2" style="width:600px" margin="0 auto">
-							<?php 
-                echo wp_kses_post( $this->renderTemplate( '<!-- wp:atb/animated-text {"options":{"theme":"type2"},"background":{"color":"#000"},"content":"Professionally reintermediate economically sound services after highly efficient ideas. Dynamically integrate reliable benefits without value-added ROI. Collaboratively.","typography":{"fontSize":{"desktop":20,"tablet":18,"mobile":14},"textTransform":"none","lineHeight":"135%","fontWeight":400,"letterSpace":"2px"},"color":"#fff","padding":{"vertical":"40px","horizontal":"15px"},"gsapAnimation":{"animationSpeed":2,"perspectiveDepth":500,"enableOscillation":true,"repeatBehavior":-1,"repeatDelay":2,"animationEffect":"default","autoRepeat":true,"transformOrigin":400,"randomColor":true,"isTextShadow":false,"textShadow":[{"blur":"6px","color":"rgba(39, 195, 130, 1)","hOffset":"4px","isInset":false,"spreed":"0px","vOffset":"1px"}],"fontStretch":"200%","animationDuration":0.8,"waveEffect":25,"easeType":"elastic(0.3, 0.2)","scaleX":1.5,"scaleY":0.2,"typingSpeed":300,"reStartTime":1000,"animateType":"glitch","customColor":false}} /-->' ) );
-                ?>
-						</div>
-						<div class="theme3" style="width:600px" margin="0 auto">
-							<?php 
-                echo wp_kses_post( $this->renderTemplate( '<!-- wp:atb/animated-text {"options":{"theme":"type3"},"background":{"color":"#000"},"typography":{"fontSize":{"desktop":30,"tablet":26,"mobile":20},"textTransform":"capitalize","fontWeight":600,"lineHeight":"0%"},"color":"#fff","padding":{"vertical":"66px","horizontal":"15px"},"gsapAnimation":{"animationSpeed":1,"perspectiveDepth":500,"enableOscillation":true,"repeatBehavior":-1,"repeatDelay":1,"animationEffect":"default","autoRepeat":true,"transformOrigin":400,"randomColor":false,"isTextShadow":true,"textShadow":[{"blur":"7px","color":"rgba(39, 195, 130, 1)","hOffset":"4px","isInset":false,"spreed":"0px","vOffset":"1px"}],"fontStretch":"200%","animationDuration":2,"waveEffect":25,"easeType":"elastic(0.3, 0.2)","scaleX":1.5,"scaleY":0.2,"typingSpeed":100,"reStartTime":1000,"animateType":"glitch","customColor":false}} /-->' ) );
-                ?>
-						</div>
-						<div class="theme4" style="width:800px" margin="0 auto">
-							<img src="<?php 
-                echo esc_url( ATB_DIR_URL . './assets/images/theme4.gif' );
-                ?>" alt="">
-						</div>
-						<div class="theme5" style="width:600px" margin="0 auto">
-							<img src="<?php 
-                echo esc_url( ATB_DIR_URL . './assets/images/theme5.gif' );
-                ?>" alt="">
-						</div>
-						<div class="theme6" style="width:700px" margin="0 auto">
-							<img src="<?php 
-                echo esc_url( ATB_DIR_URL . './assets/images/theme12.gif' );
-                ?>" alt="">
-						</div>
-						<div class="theme7" style="width:700px" margin="0 auto">
-							<?php 
-                echo wp_kses_post( $this->renderTemplate( '<!-- wp:atb/animated-text {"options":{"theme":"type7"},"background":{"color":"#000"},"content":"ETC ETC ETC","typography":{"fontSize":{"desktop":65,"tablet":45,"mobile":35},"textTransform":"uppercase","lineHeight":"0%","fontWeight":900,"letterSpace":"2px"},"color":"#fff","padding":{"vertical":"20px","horizontal":"15px"},"gsapAnimation":{"animationSpeed":1,"perspectiveDepth":500,"enableOscillation":true,"repeatBehavior":-1,"repeatDelay":1,"animationEffect":"default","autoRepeat":true,"transformOrigin":400,"randomColor":false,"isTextShadow":true,"textShadow":[{"blur":"5px","color":"rgba(39, 195, 130, 1)","hOffset":"4px","isInset":false,"spreed":"0px","vOffset":"1px"}],"fontStretch":"200%","animationDuration":0.8,"waveEffect":25,"easeType":"elastic(0.3, 0.2)","scaleX":1.2,"scaleY":0.1,"typingSpeed":300,"reStartTime":1000,"animateType":"glitch","customColor":false}} /-->' ) );
-                ?>
-						</div>
-						<div class="theme8" style="width:700px" margin="0 auto">
-							<?php 
-                echo wp_kses_post( $this->renderTemplate( '<!-- wp:atb/animated-text {"options":{"theme":"type8"},"inEffect":"bounce","outEffect":"flipOutX","background":{"color":"#22292C","type":"solid","gradient":"linear-gradient(135deg, #ff7db8, #ee2a7b)"},"typography":{"fontSize":{"desktop":35,"tablet":25,"mobile":18},"lineHeight":"135%","textTransform":"none","fontWeight":400,"letterSpace":"0px","fontVariant":400,"fontFamily":"Default","fontCategory":"sans-serif"},"color":"#fff","gsapAnimation":{"animationSpeed":1,"perspectiveDepth":500,"enableOscillation":true,"repeatBehavior":-1,"repeatDelay":1,"animationEffect":"default","autoRepeat":true,"transformOrigin":400,"randomColor":true,"isTextShadow":true,"fontStretch":"200%","animationDuration":0.8,"waveEffect":25,"easeType":"elastic(0.3, 0.2)","scaleX":1.5,"scaleY":0.2,"typingSpeed":100,"reStartTime":1000,"animateType":"glitch","customColor":false}} /-->' ) );
-                ?>
-						</div>
-						<div class="theme9" style="width:700px;" margin="0 auto">
-							<?php 
-                echo wp_kses_post( $this->renderTemplate( '<!-- wp:atb/animated-text {"options":{"theme":"type9"},"background":{"color":"#22292C"},"content":"bPlugins","typography":{"fontSize":{"desktop":80,"tablet":60,"mobile":40},"textTransform":"none","lineHeight":"135%","letterSpace":"2px","fontWeight":700},"color":"#FFFFFF","gsapAnimation":{"animationSpeed":1,"perspectiveDepth":500,"enableOscillation":true,"repeatBehavior":-1,"repeatDelay":1,"animationEffect":"default","autoRepeat":false,"transformOrigin":400,"randomColor":true,"isTextShadow":false,"textShadow":[{"blur":"19px","color":"rgba(39, 195, 130, 1)","hOffset":"4px","isInset":false,"spreed":"0px","vOffset":"1px"}],"fontStretch":"200%","animationDuration":0.8,"waveEffect":25,"easeType":"elastic(0.3, 0.2)","scaleX":1.5,"scaleY":0.2,"typingSpeed":305,"reStartTime":1000,"animateType":"glitch","customColor":false}} /-->' ) );
-                ?>
-						</div>
-						<div class="theme10" style="width:700px" margin="0 auto">
-							<?php 
-                echo wp_kses_post( $this->renderTemplate( '<!-- wp:atb/animated-text {"options":{"theme":"type10"},"background":{"color":"#22292C"},"typography":{"fontSize":{"desktop":30,"tablet":25,"mobile":18},"textTransform":"none","lineHeight":"135%","letterSpace":"4px","fontWeight":400},"color":"#FFFFFF","padding":{"vertical":"75px","horizontal":"15px"},"gsapAnimation":{"animationSpeed":1,"perspectiveDepth":500,"enableOscillation":true,"repeatBehavior":-1,"repeatDelay":1,"animationEffect":"default","autoRepeat":false,"transformOrigin":400,"randomColor":true,"isTextShadow":true,"textShadow":[{"blur":"5px","color":"rgba(39, 195, 130, 1)","hOffset":"4px","isInset":false,"spreed":"0px","vOffset":"1px"}],"fontStretch":"200%","animationDuration":0.8,"waveEffect":25,"easeType":"elastic(0.3, 0.2)","scaleX":1.5,"scaleY":0.2,"typingSpeed":300,"reStartTime":1000,"animateType":"wave","customColor":false}} /-->' ) );
-                ?>
-						</div>
-					</div>
+				<div id="atbDashboard"
+								data-info="<?php 
+                echo esc_attr( wp_json_encode( [
+                    'version'   => ATB_VERSION,
+                    'isPremium' => atbIsPremium(),
+                ] ) );
+                ?>"
+								>
 				</div>
-<?php 
+				<?php 
             }
 
             function adminEnqueueScripts() {
@@ -290,14 +238,14 @@ if ( function_exists( 'atb_fs' ) ) {
                 if ( isset( $screen->post_type ) && $screen->post_type === 'animated-text-block' ) {
                     // dashboard shortcode copy function
                     wp_enqueue_style(
-                        'admin-post-css',
-                        ATB_DIR_URL . 'build/admin-post-css.css',
+                        'shortcode-style',
+                        ATB_DIR_URL . 'build/shortcode-style.css',
                         [],
                         ATB_VERSION
                     );
                     wp_enqueue_script(
-                        'admin-post-js',
-                        ATB_DIR_URL . 'build/admin-post.js',
+                        'shortcode-js',
+                        ATB_DIR_URL . 'build/shortcode-js.js',
                         [],
                         ATB_VERSION,
                         true
@@ -332,14 +280,14 @@ if ( function_exists( 'atb_fs' ) ) {
                         true
                     );
                     wp_enqueue_style(
-                        'atb-admin-help',
-                        ATB_DIR_URL . 'build/admin-help.css',
+                        'atb-dashboard-help',
+                        ATB_DIR_URL . 'build/dashboard.css',
                         ['atb-view'],
                         ATB_VERSION
                     );
                     wp_enqueue_script(
-                        'atb-admin-help',
-                        ATB_DIR_URL . 'build/admin-help.js',
+                        'atb-dashboard-help',
+                        ATB_DIR_URL . 'build/dashboard.js',
                         [
                             'react',
                             'react-dom',
@@ -349,7 +297,7 @@ if ( function_exists( 'atb_fs' ) ) {
                         ATB_VERSION,
                         true
                     );
-                    wp_set_script_translations( 'atb-admin-help', 'animated-text-block', ATB_DIR_URL . 'languages' );
+                    wp_set_script_translations( 'atb-dashboard-help', 'animated-text-block', ATB_DIR_URL . 'languages' );
                 }
             }
 

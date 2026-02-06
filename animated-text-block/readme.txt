@@ -1,10 +1,10 @@
-=== Animated Text Block ===
-Contributors: bplugins, abuhayat, charlescormier, noornabi2, freemius
+=== Animated Text Block – Add Typing and Looping Text Effects ===
+Contributors: bplugins, abuhayat, charlescormier, noornabi2, freemius, farazi1
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, animated text, text animation, text animated, Gutenberg block
-Requires at least: 6.5+
+Tags: text block, animated text, text animation, text animation, animation text block
+Requires at least: 6.2+
 Tested up to: 6.7.2
-Stable tag: 1.1.3
+Stable tag: 1.2.0
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -13,10 +13,14 @@ Animated Text Block – Add dynamic, customizable text animations to your WordPr
 
 == Description ==
 
-Animated Text Block is a dynamic and customizable plugin that brings your website content to life with stunning text animations. Easily create eye-catching headlines, catchy slogans, or dynamic messages with powerful animation controls, multiple themes, and unique effects. Perfect for grabbing attention and enhancing user engagement on your WordPress site.
+The #1 No-Code Animated Text Block Plugin – Trusted by 4000+ Websites Worldwide
+
+[**Animated Text Block**](https://bplugins.com/products/animated-text-block/) | [**Documentation**](https://bplugins.com/docs/animated-text-block/) | [**Pricing**](https://bplugins.com/products/animated-text-block/pricing/) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/animated-text-block/#demos)
+
+[**Animated Text Block**](https://bplugins.com/products/animated-text-block/) is a dynamic and customizable plugin that brings to your website content to life with stunning text animations. Easily create eye-catching headlines, catchy slogans, or dynamic messages with powerful animation controls, multiple themes, and unique effects. Perfect for grabbing attention and enhancing user engagement on your WordPress site.
 
 
-👉[Plugin Demo](https://bblockswp.com/demo/animated-text) | [Get Pro Version](http://bplugins.com/products/animated-text-block/#pricing)👈
+**[Buy The Pro](https://bplugins.com/products/animated-text-block/pricing "Buy Pro version")**
 
 
 = Features =
@@ -139,6 +143,29 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 1.2.0 - 15 Jan 26 =
+* Added new information on this modern dashboard
+
+= 1.1.9 - 15 Nov 25 =
+* Freemius sdk latest version Update
+* Demo created for this plugin
+
+= 1.1.8 - 10 Nov 25 =
+* Support translator issue fixed
+
+= 1.1.7 - 5 Nov 25 =
+* Update lite sdk version
+
+= 1.1.6 - 30 Oct 25 =
+* ShortCode Copy issue fixed
+
+= 1.1.5 - 25 Oct 25 =
+* CSS issue fixed
+
+= 1.1.4 - 15 Oct 25 =
+* Added a modern dashboard
+* Updated freemius sdk
 
 = 1.1.3 - 25 July 25 =
 * Updated freemius sdk
