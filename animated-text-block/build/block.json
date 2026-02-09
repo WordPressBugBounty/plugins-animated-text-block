@@ -21,6 +21,21 @@
         "theme": "default"
       }
     },
+    "prefixText": {
+      "type": "string",
+      "default": ""
+    },
+    "suffixText": {
+      "type": "string",
+      "default": ""
+    },
+    "extraOptions": {
+      "type": "object",
+      "defalut": {
+        "isPrefix": false,
+        "isSuffix": false
+      }
+    },
     "loop": {
       "type": "boolean",
       "default": true
@@ -81,6 +96,34 @@
     "color": {
       "type": "string",
       "default": "#333"
+    },
+    "prefixTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 22,
+          "tablet": 20,
+          "mobile": 18
+        }
+      }
+    },
+    "prefixColor": {
+      "type": "string",
+      "default": "#000"
+    },
+    "suffixTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 22,
+          "tablet": 20,
+          "mobile": 18
+        }
+      }
+    },
+    "suffixColor": {
+      "type": "string",
+      "defalut": "#000"
     },
     "padding": {
       "type": "object",
