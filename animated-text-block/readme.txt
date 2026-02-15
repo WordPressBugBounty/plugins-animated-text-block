@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: text block, animated text, text animation, text animation, animation text block
 Requires at least: 6.5+
 Tested up to: 6.7.2
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -29,6 +29,7 @@ The #1 No-Code Animated Text Block Plugin – Trusted by 4000+ Websites Worldwid
 - **In Effect**: Apply effect when content enters the view.
 - **Our Effect**: Apply effect when content is out from the view.
 - **Style**: Apply the style for text. Such as Background, Typography, Color, Padding, and Border.
+- **Quick Style Options**: Instantly switch between predefined styles to update the animated text appearance.
 
 
 = Upgrade to [Animated Text Block] Pro and unlock powerful features to enhance your experience! =
@@ -146,6 +147,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 1.2.2 - 14 Feb 26 =
+- **New**: Instantly switch between predefined styles to change the animated text appearance.
 
 = 1.2.1 - 8 Feb 26 =
 - **Fixed**: Some style customization.
