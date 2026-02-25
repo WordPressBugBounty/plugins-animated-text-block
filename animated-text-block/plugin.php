@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Animated Text Block
  * Description: Apply animation on any text.
- * Version: 1.2.2
+ * Version: 1.2.3
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -18,7 +18,7 @@ if ( !defined( 'ABSPATH' ) ) {
 if ( function_exists( 'atb_fs' ) ) {
     atb_fs()->set_basename( false, __FILE__ );
 } else {
-    define( 'ATB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.2.2' ) );
+    define( 'ATB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.2.3' ) );
     define( 'ATB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'ATB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'ATB_HAS_FREE', 'animated-text-block/plugin.php' === plugin_basename( __FILE__ ) );
@@ -157,8 +157,12 @@ if ( function_exists( 'atb_fs' ) ) {
                 register_post_type( 'animated-text-block', array(
                     'label'         => 'Animated Text',
                     'labels'        => [
-                        'add_new'        => 'Add New',
-                        'add_new_item'   => 'Add New',
+                        'name'           => 'Animated Text',
+                        'singular_name'  => 'Animated Text',
+                        'menu_name'      => 'Animated Text',
+                        'all_items'      => 'ShortCode Generator',
+                        'add_new'        => 'Add New ShortCode',
+                        'add_new_item'   => 'Add New ShortCode',
                         'edit_item'      => 'Edit Animated',
                         'not_found'      => 'There is no please add one',
                         'item_published' => 'Published',
@@ -207,7 +211,7 @@ if ( function_exists( 'atb_fs' ) ) {
                 add_submenu_page(
                     'edit.php?post_type=animated-text-block',
                     'Demo Page',
-                    'Demo & Help',
+                    'Help & Demos',
                     'manage_options',
                     'atb_demo_page',
                     [$this, 'atb_render_demo_page']
@@ -221,14 +225,17 @@ if ( function_exists( 'atb_fs' ) ) {
 
             function atb_render_demo_page() {
                 ?>
-				<div id="atbDashboard"
-								data-info="<?php 
+				<div 
+					id="atbDashboard"
+					data-info="<?php 
                 echo esc_attr( wp_json_encode( [
-                    'version'   => ATB_VERSION,
-                    'isPremium' => atbIsPremium(),
+                    'version'            => ATB_VERSION,
+                    'isPremium'          => atbIsPremium(),
+                    'hasPro'             => ATB_HAS_PRO,
+                    'licenseActiveNonce' => wp_create_nonce( 'bPlLicenseActivation' ),
                 ] ) );
                 ?>"
-								>
+						>
 				</div>
 				<?php 
             }
@@ -290,9 +297,11 @@ if ( function_exists( 'atb_fs' ) ) {
                         ATB_DIR_URL . 'build/dashboard.js',
                         [
                             'react',
+                            'wp-api',
                             'react-dom',
                             'wp-components',
-                            'fs'
+                            'fs',
+                            'wp-util'
                         ],
                         ATB_VERSION,
                         true
@@ -304,5 +313,8 @@ if ( function_exists( 'atb_fs' ) ) {
         }
 
         new ATBPlugin();
+    }
+    if ( ATB_HAS_PRO ) {
+        require_once ATB_DIR_PATH . 'inc/LicenseActivation.php';
     }
 }
