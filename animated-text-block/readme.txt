@@ -3,8 +3,8 @@ Contributors: bplugins, abuhayat, charlescormier, noornabi2, freemius, farazi1
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: text block, animated text, text animation, text animation, animation text block
 Requires at least: 6.5+
-Tested up to: 6.7.2
-Stable tag: 1.2.3
+Tested up to: 6.9.3
+Stable tag: 1.2.4
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -147,6 +147,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 1.2.4 - 12 March 26 =
+- **Update**: ProModal alert import from bpl-tools.
+- **Fixed**: Admin dashboard data set error issue fixed.
 
 = 1.2.3 - 25 Feb 26 =
 - **Update**: Added new dashboard implement.
