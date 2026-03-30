@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: text block, animated text, text animation, text animation, animation text block
 Requires at least: 6.5+
 Tested up to: 6.9.3
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -147,6 +147,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 1.2.5 - 30 March 26 =
+- **Fixed**: Dashboard license activation issue fixed.
+- **Update**: Freemius sdk latest version added.
 
 = 1.2.4 - 12 March 26 =
 - **Update**: ProModal alert import from bpl-tools.
