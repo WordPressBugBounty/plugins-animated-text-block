@@ -2,7 +2,7 @@
 Contributors: bplugins, abuhayat, charlescormier, noornabi2, freemius, farazi1
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: text block, animated text, text animation, text animation, animation text block
-Requires at least: 6.5+
+Requires at least: 6.7+
 Tested up to: 6.9.3
 Stable tag: 1.2.5
 Requires PHP: 7.1
