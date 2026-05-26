@@ -1,5 +1,5 @@
 === Animated Text Block – Add Typing and Looping Text Effects ===
-Contributors: bplugins, abuhayat, charlescormier, noornabi2, freemius, farazi1
+Contributors: bplugins, abuhayat, charlescormier, shihabshamim, freemius, farazi1
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: text block, animated text, text animation, text animation, animation text block
 Requires at least: 6.7+
