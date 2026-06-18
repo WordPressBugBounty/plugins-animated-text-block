@@ -9,7 +9,7 @@ Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Animated Text Block – Add dynamic, customizable text animations to your WordPress site with ease .
+Animated Text Block – Add dynamic, customizable text animations to your WordPress site with ease.
 
 == Description ==
 
