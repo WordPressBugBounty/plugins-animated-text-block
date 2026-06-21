@@ -2,7 +2,7 @@ const slug = "animated-text-block";
 
 
 export const dashboardInfo = (info) => {
-    const { version, isPremium, hasPro, licenseActiveNonce } = info;
+    const { version, isPremium, hasPro, licenseActiveNonce, adminUrl, deleteDataOnUninstall, uninstallNonce } = info;
 
     const proSuffix = isPremium ? ' Pro' : '';
 
@@ -37,56 +37,208 @@ export const dashboardInfo = (info) => {
         },
         
         licenseActiveNonce,
-
-        changelogs: [
-            {
-                version: '1.2.2 - 14 Feb, 2026',
-                type: 'New',
-                list: [
-                    'Instantly switch between predefined appearance'
-                ]
-            },
-            {
-                version: '1.2.1 - 8 Feb, 2026',
-                type: 'update',
-                list: [
-                    'Some style customization',
-                    'Pro modal, Pro selector, Pro selector layout rename and upgrade the premium quality designed',
-                    'Added prefix, suffix content and add multiple sentence to animate them one by one'
-                ]
-            },
-            {
-                version: '1.1.9 - 15 Nov, 2025',
-                type: 'update',
-                list: [
-                    'reemius sdk latest version Update',
-                    'Demo created for this plugin'
-                ]
-            },
-            {
-                version: '1.8.0 - 10 Nov, 2025',
-                type: 'Fix',
-                list: [
-                    'Support translator issue fixed'
-                ]
-            },
-        ],
-        proFeatures: [
-            'Choose from a variety of pre-designed themes for unique text animations',
-            'Allows you to display and animate multiple text lines in sequence',
-            'Access premium animation styles for stunning visuals',
-            'Fine-tune the speed of text animations for better effects',
-            'Choose from a wide range of fonts, colors, and text styles to match your brand',
-            'Enhance 3D effects with adjustable perspective depth',
-            'Add dynamic motion with oscillating text effects',
-            'Automatically loop animations for continuous display'
-        ],
+        adminUrl,
+        deleteDataOnUninstall,
+        uninstallNonce,
         startButton: {
 			label: 'Start Now',
 			url: 'wp-admin/post-new.php?post_type=animated-text-block'
 		}
     }
 }
+
+export const welcomeInfo = (adminUrl = '') => ({
+    // Hero card keyword chips
+    keywords: ['Typing', 'Looping', '10+ Themes'],
+    keywordsLabel: 'Effects',
+
+    // Getting Started tabbed steps
+    gettingStarted: {
+        tabs: [
+            {
+                key: 'gutenberg',
+                label: 'Gutenberg',
+                steps: [
+                    {
+                        num: 1,
+                        title: 'Add the Block',
+                        body: 'Open the block editor. Click <strong>+</strong> or type <strong>/Animated Text</strong>.',
+                        link: { url: `${adminUrl}post-new.php`, label: 'Open Editor' },
+                    },
+                    {
+                        num: 2,
+                        title: 'Enter Your Text',
+                        body: 'Add one or more sentences to animate one by one, with optional prefix/suffix.',
+                    },
+                    {
+                        num: 3,
+                        title: 'Pick a Theme',
+                        body: 'Choose from <strong>10+ animation themes</strong> and tune speed and effects.',
+                    },
+                    {
+                        num: 4,
+                        title: 'Style & Publish',
+                        body: 'Adjust fonts, colors, and styling, then publish.',
+                    },
+                ],
+            },
+            {
+                key: 'shortcode',
+                label: 'Shortcode',
+                steps: [
+                    {
+                        num: 1,
+                        title: 'Create an Animated Text',
+                        body: 'Go to <strong>Animated Text</strong> in your admin menu and click <strong>Add New</strong>.',
+                        link: { url: `${adminUrl}post-new.php?post_type=animated-text-block`, label: 'Add New' },
+                    },
+                    {
+                        num: 2,
+                        title: 'Build & Publish',
+                        body: 'Configure your animation and <strong>Publish</strong> the post.',
+                    },
+                    {
+                        num: 3,
+                        title: 'Copy the Shortcode',
+                        body: 'Go to <strong>Animated Text -> All Items</strong> to find and copy the shortcode (e.g. <code>[animated-text id="123"]</code>).',
+                        link: { url: `${adminUrl}edit.php?post_type=animated-text-block`, label: 'All Items' },
+                    },
+                    {
+                        num: 4,
+                        title: 'Paste & Display',
+                        body: 'Paste the shortcode into any post, page, widget, or page builder layout.',
+                    },
+                ],
+            },
+            {
+                key: 'elementor',
+                label: 'Elementor',
+                steps: [
+                    {
+                        num: 1,
+                        title: 'Create an Animated Text',
+                        body: 'Go to <strong>Animated Text -> Add New</strong> to build and publish, then copy its shortcode.',
+                        link: { url: `${adminUrl}post-new.php?post_type=animated-text-block`, label: 'Add New' },
+                    },
+                    {
+                        num: 2,
+                        title: 'Edit with Elementor',
+                        body: 'Open any post or page in the <strong>Elementor</strong> editor.',
+                    },
+                    {
+                        num: 3,
+                        title: 'Add Shortcode Widget',
+                        body: 'Search for the <strong>Shortcode</strong> widget in the Elementor elements panel and drag it into your layout.',
+                    },
+                    {
+                        num: 4,
+                        title: 'Paste Shortcode',
+                        body: 'Paste your shortcode (e.g., <code>[animated-text id="123"]</code>) into the widget input field and save your changes.',
+                    },
+                ],
+            },
+            {
+                key: 'php',
+                label: 'PHP',
+                steps: [
+                    {
+                        num: 1,
+                        title: 'Get the ID',
+                        body: 'Go to <strong>Animated Text -> All Items</strong> and note the <strong>ID</strong> you want to embed.',
+                        link: { url: `${adminUrl}edit.php?post_type=animated-text-block`, label: 'All Items' },
+                    },
+                    {
+                        num: 2,
+                        title: 'Copy PHP Function',
+                        body: "Copy the WordPress <code>do_shortcode</code> function: <pre><code>&lt;?php echo do_shortcode('[animated-text id=\"YOUR_ID\"]'); ?&gt;</code></pre>",
+                    },
+                    {
+                        num: 3,
+                        title: 'Insert in Template',
+                        body: 'Open your theme or template files (e.g., <code>single.php</code>, <code>page.php</code>) in an editor.',
+                    },
+                    {
+                        num: 4,
+                        title: 'Replace ID & Save',
+                        body: 'Paste the code into your PHP file and replace <code>YOUR_ID</code> with the actual ID.',
+                    },
+                ],
+            },
+        ],
+    },
+
+    // Changelogs — each list item starts with <strong>Type:</strong> for badges
+    changelogs: [
+
+                  {
+            version: '1.2.5 - 21 July, 2026',
+            type: 'update',
+            list: [
+                '<strong>Update:</strong>Added a modern  dashboard layout.'
+            ]
+        },
+
+                   {
+            version: '1.2.4 - 21 Feb, 2026',
+            type: 'update',
+            list: [
+                '<strong>Update:</strong>ProModal alert import from bpl-tools.',
+                '<strong>Fix:</strong> Admin dashboard data set error issue fixed.'
+            ]
+        },
+        {
+            version: '1.2.3 - 14 Feb, 2026',
+            type: 'update',
+            list: [
+                '<strong>Update:</strong> Dashboard menu item name set the rename.'
+            ]
+        },
+        {
+            version: '1.2.2 - 14 Feb, 2026',
+            type: 'new',
+            list: [
+                '<strong>New:</strong> Instantly switch between predefined appearances.'
+            ]
+        },
+        {
+            version: '1.2.1 - 8 Feb, 2026',
+            type: 'update',
+            list: [
+                '<strong>Update:</strong> Some style customization.',
+                '<strong>Update:</strong> Pro modal, Pro selector, and Pro selector layout renamed and upgraded.',
+                '<strong>New:</strong> Added prefix/suffix content and multiple sentences to animate one by one.'
+            ]
+        },
+        {
+            version: '1.1.9 - 15 Nov, 2025',
+            type: 'update',
+            list: [
+                '<strong>Update:</strong> Freemius SDK updated to the latest version.',
+                '<strong>New:</strong> Demo created for this plugin.'
+            ]
+        },
+        {
+            version: '1.8.0 - 10 Nov, 2025',
+            type: 'fix',
+            list: [
+                '<strong>Fix:</strong> Support translator issue fixed.'
+            ]
+        },
+    ],
+    changelogsLimit: 6,
+    changelogsReadMoreLabel: 'View More Changelogs',
+
+    proFeatures: [
+        'Choose from a variety of pre-designed themes for unique text animations',
+        'Allows you to display and animate multiple text lines in sequence',
+        'Access premium animation styles for stunning visuals',
+        'Fine-tune the speed of text animations for better effects',
+        'Choose from a wide range of fonts, colors, and text styles to match your brand',
+        'Enhance 3D effects with adjustable perspective depth',
+        'Add dynamic motion with oscillating text effects',
+        'Automatically loop animations for continuous display'
+    ],
+});
 
 export const demoInfo = {
     allInOneLabel: 'See All Demos',

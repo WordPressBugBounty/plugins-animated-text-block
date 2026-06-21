@@ -43,7 +43,7 @@ if ( function_exists( 'atb_fs' ) ) {
                     'premium_slug'        => 'animated-text-block-pro',
                     'type'                => 'plugin',
                     'public_key'          => 'pk_64045f2c4e13c86dc40f805c6062b',
-                    'is_premium'          => true,
+                    'is_premium'          => false,
                     'premium_suffix'      => 'Pro',
                     'has_premium_version' => true,
                     'has_addons'          => false,
@@ -84,6 +84,8 @@ if ( function_exists( 'atb_fs' ) ) {
                 // premium checker
                 add_action( 'wp_ajax_atbPipeChecker', [$this, 'atbPipeChecker'] );
                 add_action( 'wp_ajax_nopriv_atbPipeChecker', [$this, 'atbPipeChecker'] );
+                // dashboard settings (delete data on uninstall)
+                add_action( 'wp_ajax_atbSaveUninstallOption', [$this, 'atbSaveUninstallOption'] );
                 // Post Type function hooks
                 add_action( 'init', array($this, 'atb_animated_text_block_post_type') );
                 // shortcode type function hooks
@@ -229,15 +231,41 @@ if ( function_exists( 'atb_fs' ) ) {
 					id="atbDashboard"
 					data-info="<?php 
                 echo esc_attr( wp_json_encode( [
-                    'version'            => ATB_VERSION,
-                    'isPremium'          => atbIsPremium(),
-                    'hasPro'             => ATB_HAS_PRO,
-                    'licenseActiveNonce' => wp_create_nonce( 'bPlLicenseActivation' ),
+                    'version'               => ATB_VERSION,
+                    'isPremium'             => atbIsPremium(),
+                    'hasPro'                => ATB_HAS_PRO,
+                    'licenseActiveNonce'    => wp_create_nonce( 'bPlLicenseActivation' ),
+                    'adminUrl'              => admin_url(),
+                    'deleteDataOnUninstall' => (bool) get_option( 'atbDeleteDataOnUninstall', false ),
+                    'uninstallNonce'        => wp_create_nonce( 'atb_save_uninstall_option' ),
                 ] ) );
                 ?>"
 						>
 				</div>
 				<?php 
+            }
+
+            // Persist the dashboard "delete data on uninstall" toggle.
+            // Contract matches bpl-tools/Admin/Settings: reads $_POST['nonce'] and $_POST['enabled'].
+            function atbSaveUninstallOption() {
+                $nonce = sanitize_text_field( wp_unslash( $_POST['nonce'] ?? '' ) );
+                if ( !wp_verify_nonce( $nonce, 'atb_save_uninstall_option' ) ) {
+                    wp_send_json_error( [
+                        'message' => __( 'Invalid security token.', 'animated-text-block' ),
+                    ], 403 );
+                }
+                if ( !current_user_can( 'manage_options' ) ) {
+                    wp_send_json_error( [
+                        'message' => __( 'You do not have permission to perform this action.', 'animated-text-block' ),
+                    ], 403 );
+                }
+                $raw_enabled = ( isset( $_POST['enabled'] ) ? sanitize_text_field( wp_unslash( $_POST['enabled'] ) ) : '' );
+                $enabled = 'true' === $raw_enabled || '1' === $raw_enabled;
+                update_option( 'atbDeleteDataOnUninstall', $enabled );
+                wp_send_json_success( [
+                    'enabled' => $enabled,
+                    'message' => ( $enabled ? __( 'Data deletion enabled.', 'animated-text-block' ) : __( 'Data will be preserved on uninstall.', 'animated-text-block' ) ),
+                ] );
             }
 
             function adminEnqueueScripts() {
