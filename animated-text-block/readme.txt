@@ -9,7 +9,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Add animated text to WordPress with the Gutenberg editor. Create typing, looping, and dynamic text animations for headlines and slogans – no code .
+Add animated text to WordPress with the Gutenberg editor. Create typing, looping, and dynamic text animations for headlines and slogans – no code.
 
 == Description ==
 
