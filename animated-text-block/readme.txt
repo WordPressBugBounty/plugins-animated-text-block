@@ -1,79 +1,82 @@
-=== Animated Text Block – Make Your Words Move and Captivate Visitors ===
-Contributors: bplugins, abuhayat, shihabshamim, freemius, farazi1
-Tags: animated text, text animation, text block, animation text block
-Tested up to: 7.1
-Stable tag: 1.2.5
-Requires PHP: 7.4
-Requires at least: 6.5+
+=== Animated Text Block – Add Typing and Looping Text Effects ===
+Contributors:  bplugins, abuhayat, shihabshamim, freemius, farazi1
 Donate link: https://www.buymeacoffee.com/abuhayat
+Tags: text block, animated text, text animation, text animation, animation text block
+Requires at least: 6.5+
+Tested up to: 7.1
+Stable tag: 1.2.6
+Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Add animated text to WordPress with the Gutenberg editor. Create typing, looping, and dynamic text animations for headlines and slogans – no code.
+Animated Text Block – Add dynamic, customizable text animations to your WordPress site with ease.
 
 == Description ==
 
-**Turn static headlines into eye-catching animated text that grabs attention the moment visitors land on your page – no code required.**
+The #1 No-Code Animated Text Block Plugin – Trusted by 4000+ Websites Worldwide
 
 [**Animated Text Block**](https://bplugins.com/products/animated-text-block/) | [**Documentation**](https://bplugins.com/docs/animated-text-block/) | [**Pricing**](https://bplugins.com/products/animated-text-block/pricing/) | [**Support**](https://bplugins.com/support/) | [**Demo**](https://bplugins.com/products/animated-text-block/#demos)
 
-https://youtube.com/watch?v=pjTc8YaLdXg
+[**Animated Text Block**](https://bplugins.com/products/animated-text-block/) is a dynamic and customizable plugin that brings to your website content to life with stunning text animations. Easily create eye-catching headlines, catchy slogans, or dynamic messages with powerful animation controls, multiple themes, and unique effects. Perfect for grabbing attention and enhancing user engagement on your WordPress site.
 
-### Why Animated Text Block?
 
-Plain text is easy to scroll past. **Animated Text Block** brings your content to life with dynamic, customizable text animations – perfect for eye-catching headlines, catchy slogans, and attention-grabbing messages. Trusted by 4000+ websites worldwide.
+**[Buy The Pro](https://bplugins.com/products/animated-text-block/pricing "Buy Pro version")**
 
-Everything happens inside the Gutenberg editor: add the block, type your text, pick an effect, and fine-tune it from the settings sidebar. Choose whether the animation runs on each character or each word, control what happens as the text enters and leaves the view, and style everything from typography to background and border.
 
-### Free Features
+= Features =
+- **Loop**: Enable/Disable loop for the animation.
+- **Animate in**: Apply animate effect in character or word.
+- **In Effect**: Apply effect when content enters the view.
+- **Our Effect**: Apply effect when content is out from the view.
+- **Style**: Apply the style for text. Such as Background, Typography, Color, Padding, and Border.
+- **Quick Style Options**: Instantly switch between predefined styles to update the animated text appearance.
 
-- **Loop Control:** Enable or disable looping for continuous animation.
-- **Animate by Character or Word:** Choose whether the effect applies per character or per word.
-- **In Effect:** Apply an entrance effect when the content enters the view.
-- **Out Effect:** Apply an exit effect when the content leaves the view.
-- **Full Styling Options:** Customize background, typography, color, padding, and border.
-- **Quick Style Options:** Instantly switch between predefined styles to update the animated text appearance.
 
-### Pro Version
+= Upgrade to [Animated Text Block] Pro and unlock powerful features to enhance your experience! =
 
-Upgrade to [**Animated Text Block Pro**](https://bplugins.com/products/animated-text-block/pricing) and unlock powerful features to enhance your experience:
+= 🚀 Pro Features = 
+- **Multiple Themes**: Choose from a variety of pre-designed themes for unique text animations.
+- **Advanced Animations**: Apply smooth and dynamic animations to your text for a more engaging presentation.
+- **Shortcode Support**: Easily embed animated text anywhere using shortcodes.
+- **Custom Fonts & Styles**:  Choose from a wide range of fonts, colors, and text styles to match your brand.
+- **Max-Width Layout**: Control the maximum width for optimal text display.
+- **Text Shadow**: Add depth and contrast with customizable text shadows.
+- **Animation Speed**: Fine-tune the speed of text animations for better effects.
+- **Perspective Depth**: Enhance 3D effects with adjustable perspective depth.
+- **Enable Oscillation**: Add dynamic motion with oscillating text effects.
+- **Auto Repeat**: Automatically loop animations for continuous display.
+- **Repeat Delay Timing**: Control the delay before repeating animations.
+- **Animation Effects**: Access premium animation styles for stunning visuals.
+- **Random Color**: Apply randomized colors for a vibrant animated text look.
+- **More Layouts & Effects**:  Get exclusive text layouts and stunning effects for creative designs.
+- **Prefix Content: Adds text before the animated content for better context and structure.
+- **Suffix Content: Adds text after the animated content to complete the message or highlight details.
+- **Multiple Animated Sentences: Allows you to display and animate multiple text lines in sequence.
+- **Highlight Style**: 20 hand-drawn SVG shapes that draw themselves around your text, with solid or gradient colours, loop and position options.
+- **Text Scroll Style**: Text lights up or unmasks line by line as you scroll, with 4 effects (vertical/horizontal highlight and mask).
+- **Modern Effects Style**: 7 effects – Blur In, Scramble, Shiny Sweep, Line Mask, Glitch, Rotating Words and Number Count-Up.
+- **Trigger & Playback**: Start on page load, scroll into view, hover, click or scroll scrub, with viewport offset, start delay, play once or every time, letter/word stagger, and pause when off-screen or when the tab is hidden.
+- **Priority Support**: Get fast and dedicated support for any issues or questions.
+- **Updates**:  Stay ahead with new features and improvements in every update.
 
-- **Multiple Themes:** Choose from a variety of pre-designed themes for unique text animations.
-- **Advanced Animations:** Apply smooth and dynamic animations for a more engaging presentation.
-- **Shortcode Support:** Easily embed animated text anywhere using shortcodes.
-- **Custom Fonts & Styles:** Choose from a wide range of fonts, colors, and text styles to match your brand.
-- **Max-Width Layout:** Control the maximum width for optimal text display.
-- **Text Shadow:** Add depth and contrast with customizable text shadows.
-- **Animation Speed:** Fine-tune the speed of text animations for better effects.
-- **Perspective Depth:** Enhance 3D effects with adjustable perspective depth.
-- **Oscillation:** Add dynamic motion with oscillating text effects.
-- **Auto Repeat & Repeat Delay:** Automatically loop animations and control the delay between repeats.
-- **Premium Animation Effects:** Access exclusive animation styles for stunning visuals.
-- **Random Color:** Apply randomized colors for a vibrant animated text look.
-- **Prefix & Suffix Content:** Add text before and after the animated content for better context.
-- **Multiple Animated Sentences:** Display and animate multiple text lines in sequence.
-- **Priority Support & Updates:** Get fast, dedicated support and regular improvements.
 
-### How to Use
+= How to use =
+- First, install the Animated Text Block plugin
+- Add the Animated Text block from the block category called "Widgets" in the Gutenberg editor.
+- You can change block settings from the right-side settings sidebar.
+- Enjoy!
 
-1. Install and activate the **Animated Text Block** plugin.
-2. Open a post or page in the Gutenberg editor.
-3. Add the **Animated Text** block from the "Widgets" block category.
-4. Type your text and adjust the animation and style settings in the right-side sidebar.
-5. Publish – your animated text is live!
+* For Installation help click on Installation Tab
 
-### Use Cases
 
-- **Hero Headlines:** Make your homepage headline impossible to miss.
-- **Slogans & Taglines:** Rotate catchy phrases that describe your brand.
-- **Promotions:** Animate limited-time offers and announcements.
-- **Landing Pages:** Add motion that draws the eye to your call to action.
+= Feedback =
+- Did you like this plugin? Dislike it? Do you have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback')
 
-Did you like this plugin? Do you have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback').
 
 ### ⭐ Check out the Parent Plugin of this plugin-
 
 🔥 **[B Blocks](https://bblockswp.com)** – Best gutenberg blocks collections for WordPress.
+
 
 ### ⭐ Check out our other WordPress Plugins-
 
@@ -89,57 +92,47 @@ Did you like this plugin? Do you have a feature request? [Please share your feed
 
 🔥 **[Advanced Post Block](https://bplugins.com/products/advanced-post-block)** – Best Post Display Plugin for WordPress.
 
+
 == Installation ==
 
-**From your WordPress dashboard (recommended):**
+= From Gutenberg Editor: =
+1. Go to the WordPress Block/Gutenberg Editor
+2. Search For **Animated Text Block**
+3. Click on the **Animated Text** block to add the block
 
-1. Go to **Plugins → Add New**.
-2. Search for **"Animated Text Block"**.
-3. Click **Install Now**, then **Activate**.
-4. Add the **Animated Text** block to any post or page in the Gutenberg editor.
+= Download & Upload: =
+1. Download the **Animated Text Block** plugin (*.zip file*)
+2. In your admin area, go to the Plugins menu and click on **Add New**
+3. Click on **Upload Plugin** and choose the **`animated-text-block.zip`** file and click on **Install Now**
+4. Activate the plugin and Enjoy!
 
-**Manual installation:**
+= Manually: =
+1. Download and upload the **Animated Text Block** plugin to the **`/wp-content/plugins/`** directory
+2. Activate the plugin through the Plugins menu in WordPress
 
-1. Download the **Animated Text Block** plugin (.zip file).
-2. In your admin area, go to **Plugins → Add New** and click **Upload Plugin**.
-3. Choose the `animated-text-block.zip` file and click **Install Now**.
-4. Activate the plugin, then add the block from the Gutenberg editor.
-
-Alternatively, upload the plugin folder to the `/wp-content/plugins/` directory and activate it through the **Plugins** menu in WordPress.
 
 == Frequently Asked Questions ==
 
 = Is Animated Text Block free? =
 
-Yes, Animated Text Block is a free Gutenberg block plugin. A Pro version with additional themes, effects, and controls is also available.
+Yes, Animated Text Block is a free Gutenberg block plugin.
 
 = Does it work with any WordPress theme? =
 
-Yes, it works with any standard WordPress theme.
+Yes, it will work with any standard WordPress theme.
 
 = Can I change block settings? =
 
-Yes, you can change all block settings from the Gutenberg block editor's right sidebar.
+Yes, you can change block settings from the Gutenberg block editor's right sidebar.
 
-= How many times can I reuse the block? =
+= How many times can I reuse a block? =
 
-You can use the block an unlimited number of times across your site.
-
-= Can I animate text by character or by word? =
-
-Yes. The "Animate in" option lets you choose whether the animation effect applies to each character or each word.
-
-= Can I make the animation loop continuously? =
-
-Yes. Looping can be enabled or disabled in the free version, and the Pro version adds auto repeat with a configurable repeat delay.
-
-= Can I embed animated text with a shortcode? =
-
-Shortcode support is available in the Pro version, letting you place animated text anywhere shortcodes are accepted.
+You can use unlimited times as you want.
 
 = Where can I get support? =
 
-You can post your questions on the [support forum here](https://wordpress.org/support/plugin/animated-text-block/).
+You can post your questions on the [support forum here](https://wordpress.org/support/plugin/animated-text-block/)
+
 
 == Screenshots ==
 
@@ -156,7 +149,57 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 11. Default
 12. Setting
 
+
+== Third-Party Libraries ==
+
+This plugin uses the following third-party libraries:
+
+* [GSAP](https://gsap.com/) 3.15 (including the SplitText and ScrambleText plugins) - Standard "No Charge" GSAP License – https://gsap.com/standard-license (bundled in the `build/` files, powers the animation styles and effects).
+* [Textillate.js](https://github.com/jschr/textillate) with [Lettering.js](https://github.com/davatron5000/Lettering.js) - MIT License (bundled at `public/js/jquery.textillate.min.js`).
+* [Animate.css](https://github.com/animate-css/animate.css) - MIT License (bundled at `public/css/animate.min.css`).
+* [Font Awesome Free](https://fontawesome.com/) 6.4.2 - Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License (bundled at `assets/css/font-awesome.min.css` and `assets/webfonts/`).
+
+= bpl-tools =
+* Source / GitHub: https://github.com/bPlugins/bpl-tools
+* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
+* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
+
+As the external service functionality is handled by bpl-tools as a third-party library, the following services are utilized:
+
+= bPlugins API =
+* Service URL: https://api.bplugins.com
+* Purpose: The plugin's admin dashboard fetches product comparison data and pricing information to display relevant upgrade options and feature details.
+* Data Sent: Only the plugin slug is transmitted; no personal or site data is collected.
+* Terms of Service: https://bplugins.com/terms-of-service/
+* Privacy Policy: https://bplugins.com/privacy-policy/
+
+= WordPress.org Plugins API =
+* Service URL: https://api.wordpress.org/plugins/info/1.2/
+* Purpose: The admin dashboard queries the official WordPress.org Plugins API to retrieve and display a curated list of other plugins by the same author ("Our Plugins" section).
+* Data Sent: Plugin slugs and author name; no personal or site data is collected.
+* Terms of Service: https://wordpress.org/about/tos/
+* Privacy Policy: https://wordpress.org/about/privacy/
+
+= Freemius API =
+* Service URL: https://api.freemius.com
+* Purpose: Handles license activation, premium feature verification, update checks, and opt-in telemetry for both free and pro versions.
+* Data Sent: Site URL, admin email, license keys, and version numbers.
+* Terms of Service: https://freemius.com/terms/
+* Privacy Policy: https://freemius.com/privacy/
+
+
 == Changelog ==
+
+= 1.2.6 - 25 Oct 26 =
+- **New**: Highlight style (Pro): 20 hand-drawn SVG shapes that draw themselves around your text, with solid or gradient colours, loop and position options.
+- **New**: Text Scroll style (Pro): text lights up or unmasks line by line as you scroll, with 4 effects (vertical/horizontal highlight and mask).
+- **New**: Modern Effects style (Pro): 7 effects (Blur In, Scramble, Shiny Sweep, Line Mask, Glitch, Rotating Words, Number Count-Up).
+- **New**: Trigger & Playback panel (Pro): start on page load, scroll into view, hover, click or scroll scrub. Adds viewport offset, start delay, play once or every time, letter/word stagger, and pause when off-screen or when the tab is hidden.
+- **New**: Replay animation button in the block toolbar and sidebar, plus live preview that replays the animation when a setting changes (editor only, Free and Pro).
+- **Improved**: GSAP updated to 3.15. Effect scripts load only on pages that use them.
+- **Improved**: Replay now works in the editor for all 14 animation styles. Swaying, Axis Wave and Stretch Wave now animate only their own block.
+- **Improved**: Equal 10px spacing between fields in the Animated Text Settings panel.
 
 = 1.2.5 - 30 March 26 =
 - **Fixed**: Dashboard license activation issue fixed.
@@ -242,9 +285,3 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Initial Release
 
 
-== Developer Notes ==
-Public source code GitHub link for review, study, and contribute.
-
-https://github.com/noornabi07/animated-text-block-pro
-
-For more information on how to contribute to this plugin, please visit our GitHub repository.
