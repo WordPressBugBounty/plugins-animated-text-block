@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Animated Text Block
  * Description: Apply animation on any text.
- * Version: 1.2.6
+ * Version: 1.2.7
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -21,7 +21,7 @@ if (function_exists('atb_fs')) {
 	atb_fs()->set_basename(true, __FILE__);
 } 
 else {
-	define('ATB_VERSION', isset($_SERVER['HTTP_HOST']) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.2.6');
+	define('ATB_VERSION', isset($_SERVER['HTTP_HOST']) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.2.7');
 	define('ATB_DIR_URL', plugin_dir_url(__FILE__));
 	define('ATB_DIR_PATH', plugin_dir_path(__FILE__));
 
@@ -129,9 +129,12 @@ else {
 
 			public function atb_shortcode_handler($atts)
 			{
-				$post_id = $atts['id'];
-				$post = get_post($post_id);
-				if (!$post) {
+				$atts = shortcode_atts(['id' => 0], $atts, 'animated-text');
+				$post_id = absint($atts['id']);
+				$post = $post_id ? get_post($post_id) : null;
+
+				// Only render this plugin's own shortcode posts, never content of other post types
+				if (!$post || 'animated-text-block' !== $post->post_type) {
 					return '';
 				}
 				if (post_password_required($post)) {
@@ -139,6 +142,9 @@ else {
 				}
 				switch ($post->post_status) {
 					case 'publish':
+						if (!$this->canReadPublishedPost($post)) {
+							return '';
+						}
 						return $this->displayContent($post);
 					case 'private':
 						if (current_user_can('read_private_posts')) {
@@ -155,6 +161,24 @@ else {
 					default:
 						return '';
 				}
+			}
+
+			// Honor per-post read restrictions from other plugins (map_meta_cap / user_has_cap) without
+			// locking out logged-out visitors, who never hold the base 'read' capability
+			private function canReadPublishedPost($post)
+			{
+				if (current_user_can('read_post', $post->ID)) {
+					return true;
+				}
+
+				$readCap = get_post_type_object($post->post_type)->cap->read;
+				if (current_user_can($readCap)) {
+					// The user can read in general but was refused this post, so a restriction applies
+					return false;
+				}
+
+				// No 'read' cap (e.g. logged out): allow only when read_post maps to nothing stricter than 'read'
+				return [$readCap] === map_meta_cap('read_post', get_current_user_id(), $post->ID);
 			}
 
 			public function displayContent($post)
