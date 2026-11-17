@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: text block, animated text, text animation, text animation, animation text block
 Requires at least: 6.5+
 Tested up to: 7.1
-Stable tag: 1.2.7
+Stable tag: 1.2.8
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -190,6 +190,8 @@ As the external service functionality is handled by bpl-tools as a third-party l
 
 
 == Changelog ==
+= 1.2.8 - 27 Oct 26 =
+- **Update**: Added Black Friday & Cyber Monday (BFCM) promotional banner.
 
 = 1.2.7 - 27 Oct 26 =
 - **Security**: Fixed missing authorization in [animated-text] shortcode that could expose content of other post types.

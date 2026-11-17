@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Animated Text Block
  * Description: Apply animation on any text.
- * Version: 1.2.7
+ * Version: 1.2.8
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -21,7 +21,7 @@ if (function_exists('atb_fs')) {
 	atb_fs()->set_basename(true, __FILE__);
 } 
 else {
-	define('ATB_VERSION', isset($_SERVER['HTTP_HOST']) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.2.7');
+	define('ATB_VERSION', isset($_SERVER['HTTP_HOST']) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.2.8');
 	define('ATB_DIR_URL', plugin_dir_url(__FILE__));
 	define('ATB_DIR_PATH', plugin_dir_path(__FILE__));
 
@@ -319,6 +319,27 @@ else {
 		}
 		new ATBPlugin();
 	}
+	   require_once ATB_DIR_PATH . 'includes/class-atb-promo-banner.php';
+	function atbpluginActionLinks( $links, $file ) {
+    if ( plugin_basename( __FILE__ ) === $file ) {
+        $goProLink = 'https://bplugins.com/products/animated-text-block/pricing/?utm_source=admin&utm_medium=plugins&utm_campaign=bfcm2026';
+
+        $linkText = ( current_time( 'Y-m-d' ) > '2026-12-05' )
+            ? __( 'Upgrade to Pro', 'animated-text-block' )
+            : __( 'Upgrade to Pro & Save Up to 45% This Black Friday!', 'animated-text-block' );
+
+        $links['help-and-demos'] = sprintf(
+            '<a href="%s" target="_blank" rel="noopener noreferrer" style="%s">%s</a>',
+            esc_url( $goProLink ),
+            'color:#d63638;font-weight:bold;',
+            $linkText
+        );
+    }
+
+    return $links;
+}
+
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'atbpluginActionLinks', 10, 2 );
 
 	
 }
